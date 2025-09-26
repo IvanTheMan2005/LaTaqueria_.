@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Taqueria | Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 2rem 2rem; /* extra top padding pushes title down */
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-header h1 {
+      font-size: 2.5rem;
+      color: #2a6917;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Masonry layout */
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+
+    .gallery-item {
+      margin-bottom: 1rem;
+      break-inside: avoid;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img,
+    .gallery-item:hover video {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .gallery-grid {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reuse your navbar -->
+  <header> 
+    <div class="navbar"> 
+      <div class="logo">
+  <a href="index.html">
+    <img src="images/La Taqueria_LogoArtboard 1.png" alt="La Taqueria Logo">
+  </a>
+</div>
+      <ul class="nav-links"> 
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="location.html">Location</a></li> 
+        <li><a href="menu.html">Menu</a></li> 
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+      <a href="gallery.html" class="action_btn active">Gallery</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="dropdown_menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html" class="action_btn">Gallery</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Gallery -->
+  <section class="gallery-container">
+    <div class="gallery-header">
+      <h1>Our Gallery</h1>
+      <p>A glimpse inside La Taqueria — our food, people, and vibrant atmosphere.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="images/INSTAPOST.jpg" alt="Dish 1"></div>
+      <div class="gallery-item"><img src="images/chilly.jpg" alt="Dish 2"></div>
+      <div class="gallery-item"><img src="images/burro.jpg" alt="Restaurant interior"></div>
+      <div class="gallery-item"><img src="images/tor.jpg" alt="Cocktails"></div>
+      
+      <!-- Video Item -->
+      <div class="gallery-item">
+        <video autoplay muted loop playsinline>
+          <source src="images/WhatsApp Video 2025-09-26 at 2.22.20 PM.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="gallery-item"><img src="images/ing.jpg" alt="Tacos"></div>
+      <div class="gallery-item"><img src="images/replacement3.jpg" alt="Cocktails"></div>
+      <div class="gallery-item"><img src="images/replacement2.jpg" alt="Cocktails"></div>
+    </div>
+  </section>
+
+  <script>  
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
+
+  <footer>
+  <div class="footer-container">
+    <!-- Left side -->
+    <div class="footer-left">
+      <p><strong>Location:</strong> Stockland Gables, shop 13, 4 Lakefront Crescent, 2765 NSW</p>
+      <p><strong>Email:</strong> tacos@lataqueria.com.au</p>
+    </div>
+
+    <!-- Right side -->
+    <div class="footer-right">
+      <div class="logo-social">
+        <img src="images/La Taqueria_LogoArtboard 1.png" alt="La Taqueria Logo" class="footer-logo">
+        <div class="social-icons">
+         <a href="https://www.facebook.com/profile.php?id=61578326142020&mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/lataqueria.gables/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

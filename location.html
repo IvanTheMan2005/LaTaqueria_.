@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location - La Taqueria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+   <!-- Navigation -->
+<header> 
+  <div class="navbar"> 
+    <div class="logo">
+  <a href="index.html">
+    <img src="images/La Taqueria_LogoArtboard 1.png" alt="La Taqueria Logo">
+  </a>
+</div>
+    <ul class="nav-links"> 
+      <li><a href="index.html" class="active">Home</a></li> 
+      <li><a href="location.html">Location</a></li> 
+      <li><a href="menu.html">Menu</a></li> 
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <a href="gallery.html" class="action_btn">Gallery</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Dropdown starts CLOSED -->
+  <div class="dropdown_menu">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html" class="action_btn">Gallery</a></li>
+  </ul>
+  </div>
+</header>
+
+<script>  
+  const toggleBtn = document.querySelector('.toggle_btn')
+  const toggleBtnIcon = document.querySelector('.toggle_btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+
+  }
+</script>
+
+  <!-- Main Content -->
+  <main class="location-content">
+    <h1>Our Location</h1>
+
+    <div class="map-wrapper">
+      <!-- Google Map Embed -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6644.39888043643!2d150.9060311175655!3d-33.626073981023076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStockland%20Gables%2C%204%20Lakefront%20Crescent%2C%202765%20NSW!5e0!3m2!1sen!2sau!4v1757401416650!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+        </iframe>
+      </div>
+
+      <!-- Address & Info -->
+      <div class="address-info">
+        <h2>Visit Us</h2>
+        <p>Stockland Gables, shop 13,  4 Lakefront Crescent, 2765 NSW</p>
+        <p>Open: Mon-Sun, 10:00 AM – 9:00 PM</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <!-- Left side -->
+    <div class="footer-left">
+      <p><strong>Location:</strong> Stockland Gables, shop 13, 4 Lakefront Crescent, 2765 NSW</p>
+      <p><strong>Email:</strong> tacos@lataqueria.com.au</p>
+    </div>
+
+    <!-- Right side -->
+    <div class="footer-right">
+      <div class="logo-social">
+        <img src="images/La Taqueria_LogoArtboard 1.png" alt="La Taqueria Logo" class="footer-logo">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61578326142020&mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/lataqueria.gables/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- JS for mobile menu -->
+  <script src="mobile.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - La Taqueria</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Container */
+    .about-container {
+      min-height: 700px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #e40000;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Social Links */
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #e40000;
+      font-size: 1.6rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #111;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+
+      .about-text h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navigation -->
+<header> 
+  <div class="navbar"> 
+    <div class="logo">
+  <a href="index.html">
+    <img src="images/La Taqueria_LogoArtboard 1.png" alt="La Taqueria Logo">
+  </a>
+</div> 
+    <ul class="nav-links"> 
+      <li><a href="index.html" class="active">Home</a></li> 
+      <li><a href="location.html">Location</a></li> 
+      <li><a href="menu.html">Menu</a></li> 
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <a href="gallery.html" class="action_btn">Gallery</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Dropdown starts CLOSED -->
+  <div class="dropdown_menu">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html" class="action_btn">Gallery</a></li>
+  </ul>
+  </div>
+</header>
+
+<script>  
+  const toggleBtn = document.querySelector('.toggle_btn')
+  const toggleBtnIcon = document.querySelector('.toggle_btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+
+  }
+</script>
+
+  <!-- Main Content -->
+  <main>
+    <section class="about-container">
+      <div class="about-text">
+        <h1>About Us</h1>
+        <p>
+           From Mexico to Sydney.
+
+It all started with a craving for real Mexican food - the kind that tastes like home. 
+
+La Taqueria Mexican Street Food is a space to share the flavours of our land and the food we grew up with. Our traditional recipes have been passed down through our abuelas (grandmothers), straight from our family kitchen, inspired by the vibrant markets and traditions of Mexico.  
+
+Today, Gables is our home, and we're excited to bring the real flavours of Mexico to our community, our food is honest, simple, fresh and full of flavour, just the way it's meant to be.
+
+We're proud to introduce a taste of Mexican culture, using as many local ingredients as possible and supporting local farmers along the way.
+
+Bienvenidos!
+        </p>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://www.instagram.com/lataqueria.gables/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61578326142020&mibextid=rS40aB7S9Ucbxw6v" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="images/about1.jpg" alt="Inside La Taqueria">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <!-- Left side -->
+    <div class="footer-left">
+      <p><strong>Location:</strong> Stockland Gables, shop 13, 4 Lakefront Crescent, 2765 NSW</p>
+      <p><strong>Email:</strong> tacos@lataqueria.com.au</p>
+    </div>
+
+    <!-- Right side -->
+    <div class="footer-right">
+      <div class="logo-social">
+        <img src="images/La Taqueria_LogoArtboard 1.png" alt="La Taqueria Logo" class="footer-logo">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61578326142020&mibextid=rS40aB7S9Ucbxw6v"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/lataqueria.gables/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <!-- Mobile nav script -->
+  <script src="mobile.js"></script>
+</body>
+</html>
